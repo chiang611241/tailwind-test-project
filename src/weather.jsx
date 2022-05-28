@@ -18,7 +18,7 @@ const Weather = () => {
 
   return (
     <>
-      <p>{JSON.stringify(currentWeather?.weather?.records)}</p>
+      <p>{currentWeather?.weather?.records.location.map((location) => (JSON.stringify(location.weatherElement))).join('/')}</p>
       <button
         className="bg-blue-300 text-white rounded-md p-2"
         onClick={onClick}
